@@ -1,0 +1,19 @@
+{
+    "name": "qrcode-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "fancyqr": "0.0.1",
+        "images": "^3.0.1",
+        "jimp": "^0.2.28",
+        "qrcode": "^1.2.0"
+    }
+}
