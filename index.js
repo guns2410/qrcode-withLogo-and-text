@@ -8,7 +8,8 @@ const text = '1234567890';
 const TextOutPutFileName = `./outputs/${text}.png`;
 const OutputFileName = `./outputs/${text}-temp.png`;
 const QRCodeWidth = 512;
-const LogoLocation = (QRCodeWidth / 2) - 50;
+const LogoHeight = 100;
+const LogoLocation = (QRCodeWidth / 2) - (LogoHeight / 2);
 
 QRCode.toFile(QRCodeFileName, text, {
     width: QRCodeWidth,
