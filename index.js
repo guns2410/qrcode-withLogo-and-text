@@ -11,7 +11,7 @@ const QRCodeWidth = 512;
 const LogoHeight = 100;
 const LogoLocation = (QRCodeWidth / 2) - (LogoHeight / 2);
 
-// Generate QRCode with the Text
+// Generate QRCode from Text
 QRCode.toFile(QRCodeFileName, text, {
     width: QRCodeWidth,
     errorCorrectionLevel: 'H',
