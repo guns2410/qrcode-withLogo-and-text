@@ -11,16 +11,19 @@ const QRCodeWidth = 512;
 const LogoHeight = 100;
 const LogoLocation = (QRCodeWidth / 2) - (LogoHeight / 2);
 
+// Generate QRCode with the Text
 QRCode.toFile(QRCodeFileName, text, {
     width: QRCodeWidth,
     errorCorrectionLevel: 'H',
 }, (err) => {
     if (err) console.error(err.message, err);
 
+    // Merge the QRCode with the logo
     images(QRCodeFileName)
         .draw(images(LogoFileName), LogoLocation, LogoLocation)
         .save(OutputFileName, { quality: 100 });
 
+    // Write the Text with the QR Code
     let loadedImage;
     Jimp.read(OutputFileName)
     .then((image) => {
